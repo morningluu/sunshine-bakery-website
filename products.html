@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阳光面包坊 - 产品展示</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" fill="#FDEBD0" stroke="#E67E22" stroke-width="2"/>
+          <path d="M14 26c0-2 2-6 10-6s10 4 10 6c0 4-2 8-10 8s-10-4-10-8z" fill="#E67E22" opacity="0.8"/>
+          <path d="M16 22c1-3 3-5 8-5s7 2 8 5" stroke="#D35400" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="18" cy="24" r="1.5" fill="#FDEBD0"/>
+          <circle cx="24" cy="24" r="1.5" fill="#FDEBD0"/>
+          <circle cx="30" cy="24" r="1.5" fill="#FDEBD0"/>
+        </svg>
+        阳光面包坊
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="products.html" class="active">产品展示</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页面 Banner（含轮播） -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>产品展示</h1>
+      <p>精选优质食材，传承经典工艺，为您呈现最美味的烘焙作品</p>
+
+      <!-- 轮播 -->
+      <div class="carousel" id="productCarousel">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- 第1张 -->
+          <div class="carousel-slide">
+            <div class="image-wrap">
+              <img src="images/20.jpg" alt="蛋糕系列">
+              <span class="slide-label">蛋糕系列</span>
+            </div>
+          </div>
+          <!-- 第2张 -->
+          <div class="carousel-slide">
+            <div class="image-wrap">
+              <img src="images/10.jpg" alt="面包系列">
+              <span class="slide-label">面包系列</span>
+            </div>
+          </div>
+          <!-- 第3张 -->
+          <div class="carousel-slide">
+            <div class="image-wrap">
+              <img src="images/12.jpg" alt="甜点系列">
+              <span class="slide-label">甜点系列</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 左右箭头 -->
+        <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="上一张">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" id="carouselNext" aria-label="下一张">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <!-- 指示点 -->
+        <div class="carousel-dots" id="carouselDots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类筛选器 -->
+  <div class="filter-section">
+    <div class="container">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">全部产品</button>
+        <button class="filter-tab" data-filter="cake">蛋糕系列</button>
+        <button class="filter-tab" data-filter="bread">面包系列</button>
+        <button class="filter-tab" data-filter="dessert">甜点系列</button>
+        <button class="filter-tab" data-filter="cookie">饼干系列</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品列表网格 -->
+  <section class="products-section">
+    <div class="container">
+      <div class="product-grid" id="productGrid">
+
+        <!-- 蛋糕系列 -->
+        <div class="product-card" data-category="cake">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/12.jpg" alt="经典芝士蛋糕">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>经典芝士蛋糕</h3>
+            <p class="desc">浓郁芝士与绵密口感，入口即化的经典美味</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>68</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cake">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/21.jpg" alt="巧克力树莓蛋糕">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>巧克力树莓蛋糕</h3>
+            <p class="desc">黑巧克力与新鲜树莓的完美融合，酸甜交织</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>78</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cake">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/20.jpg" alt="草莓奶油蛋糕">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>草莓奶油蛋糕</h3>
+            <p class="desc">新鲜草莓搭配轻盈奶油，甜蜜浪漫的精致之选</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>88</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 面包系列 -->
+        <div class="product-card" data-category="bread">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/22.jpg" alt="法式可颂">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>法式可颂</h3>
+            <p class="desc">层层酥脆、黄油飘香，纯正法式手工可颂</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>18</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="bread">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/7.jpg" alt="全麦吐司">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>全麦吐司</h3>
+            <p class="desc">高比例全麦粉制作，健康低脂，麦香浓郁</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>25</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="bread">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/16.jpg" alt="肉桂卷">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>肉桂卷</h3>
+            <p class="desc">浓郁肉桂香气，柔软面团层层卷绕的北欧经典</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>22</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 甜点系列 -->
+        <div class="product-card" data-category="dessert">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/18.jpg" alt="巧克力马芬">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>巧克力马芬</h3>
+            <p class="desc">香浓巧克力搭配松软蛋糕，甜蜜每一口</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>25</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="dessert">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/11.jpg" alt="蓝莓马芬">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>蓝莓马芬</h3>
+            <p class="desc">整颗蓝莓融入松软蛋糕，清新果香四溢</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>28</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="dessert">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/9.jpg" alt="法式马卡龙">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>法式马卡龙</h3>
+            <p class="desc">缤纷色彩、酥脆外壳，甜蜜内馅的精致法式甜点</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>35</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 饼干系列 -->
+        <div class="product-card" data-category="cookie">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/15.jpg" alt="黄油曲奇">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>黄油曲奇</h3>
+            <p class="desc">丹麦进口黄油制作，酥脆香甜的经典曲奇</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>32</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cookie">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/14.jpg" alt="燕麦饼干">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>燕麦饼干</h3>
+            <p class="desc">低糖全谷物燕麦，健康美味兼得的营养饼干</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>28</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cookie">
+          <div class="card-img">
+            <div class="image-wrap">
+              <img src="images/6.jpg" alt="巧克力曲奇">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>巧克力曲奇</h3>
+            <p class="desc">比利时黑巧克力碎，浓郁可可香气的酥脆曲奇</p>
+            <div class="card-bottom">
+              <div class="price"><span>¥</span>35</div>
+              <button class="btn btn-primary btn-sm add-to-cart-btn">加入购物车</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 购物车侧边面板 -->
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-panel__header">
+      <h3 class="cart-panel__title">
+        <svg class="cart-panel__title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        购物车
+      </h3>
+      <button class="cart-panel__close" id="cartClose" aria-label="关闭购物车">&times;</button>
+    </div>
+
+    <div class="cart-panel__items" id="cartItems">
+      <!-- JS动态渲染 -->
+    </div>
+
+    <div class="cart-panel__footer">
+      <div class="cart-panel__total">
+        <span>合计：</span>
+        <span class="cart-panel__total-price" id="cartTotal">¥0</span>
+      </div>
+      <div class="cart-panel__actions">
+        <button class="btn btn-outline btn-sm" id="cartClear">清空购物车</button>
+        <button class="btn btn-primary btn-sm" id="cartOrder">下单</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 浮动购物车按钮 -->
+  <button class="cart-float-btn" id="cartFloatBtn" aria-label="购物车">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+      <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+    </svg>
+    <span class="cart-float-btn__count" id="cartFloatCount"></span>
+  </button>
+
+  <!-- 购物车遮罩 -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-col">
+        <h4>联系信息</h4>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>北京市朝阳区阳光路88号</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>010-8888-6666</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>hello@sunbakery.com</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>营业时间</h4>
+        <p>周一至周日</p>
+        <p>08:00 - 22:00</p>
+        <p style="margin-top:12px;font-size:0.85rem;color:rgba(255,255,255,0.5);">全年无休，期待您的光临</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速链接</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="products.html">产品展示</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 阳光面包坊 保留所有权利</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
